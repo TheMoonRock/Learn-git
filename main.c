@@ -5,6 +5,9 @@
 
 // main function - 
 // where the execution of program begins 
+
+//TODO: learn functions in c
+
 int main() 
 { 
 
