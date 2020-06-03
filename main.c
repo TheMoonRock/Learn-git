@@ -1,18 +1,32 @@
-// Simple C program to display "Hello World" 
-
-// Header file for input output functions 
-#include <stdio.h> 
-
-// main function - 
-// where the execution of program begins 
-
-//TODO: learn functions in c
-
-int main() 
-{ 
-
-	// prints hello world 
-	printf("Hello World\n"); 
-
-	return 0; 
-} 
+#include <stdio.h>
+ 
+main() {
+   float x,y;
+   char sign='+';
+   while (sign != '0') {
+      printf("Знак: ");
+      scanf("%c%*c", &sign);
+      if (sign == '0') { break; }
+      if (sign == '+' || sign == '-' || sign == '*' || sign == '/') {
+         printf("x=");
+         scanf("%f%*c", &x);
+         printf("y=");
+         scanf("%f%*c", &y);
+         switch (sign) {
+            case '+':
+               printf("%.2f\n", x+y);
+               break;
+            case '-':
+               printf("%.2f\n", x-y);
+               break;
+            case '*':
+               printf("%.2f\n", x*y);
+               break;
+            case '/':
+               if (y != 0) printf("%.2f\n", x/y);
+               else printf("Деление на ноль!\n");
+         }
+      }
+      else printf("Неверно указан знак операции\n");
+   }
+}
